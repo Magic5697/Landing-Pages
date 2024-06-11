@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+   text-decoration: none;
+   list-style: none;
+}
+
+/*colores*/
+:root{
+    --color__principal: rgb(109, 104, 104);
+    --color__secundario: rgb(110, 47, 47); 
+    --color__terciario: rgb(69, 174, 67);
+    /*colores basicos*/
+    --color__blanco: rgb(255, 255, 255);
+    --color__negro: rgb(0, 0, 0);
+}
+
+nav{
+ background: var(--color__secundario);
+ height: 80px;
+ width: 100%;
+}
+
+label.logo{
+     color: var(--color__blanco);
+     font-size: 30px;
+     line-height: 80px;
+     padding: 0 14px;
+     font-family: "PT Serif", serif;
+     font-weight: 700;
+     font-style: normal;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 7px;
+
+}
+nav ul li a{
+    color: var(--color__blanco);
+    font-size: 17px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a:hover{
+    background-color: var(--color__terciario);
+    transition: .5s;
+}
