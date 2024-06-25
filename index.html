@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!--Libreria bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Landing Page</title>
 </head>
 <body>
@@ -15,23 +17,115 @@
         </label>
         <label class="logo">Desarrolla-T</label>
         <ul>
-            <li><a href="#">inicio</a></li>
+            <li><a href="/inicio/inicio.html">inicio</a></li>
             <li><a href="/videojuegos/Videojuegos.html">Videojuegos</a></li>
-            <li><a href="#">acerca del juego</a></li>
-            <li><a href="#">servicios</a></li>
+            <li><a href="/Acerca del juego/informacion de.html">acerca del juego</a></li>
+            <li><a href="/servicios/atencion al cliente.html">servicios</a></li>
         </ul>
     </nav>
 </body>
 </html>
 
-<section class="games">
-    <div class="Texto__inicio">
-        <h2>Bienvenido</h2>
-        <h3>A mi pagina web</h3>
-
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    
-</section>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://plus.unsplash.com/premium_photo-1687672029731-ea46c80a6aea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Bienvenido</h5>
+          <p>Al mundo Del Videojuego.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Juegos Retro</h5>
+          <p>Diviertete Recordando Buenos Tiempos</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1596998791568-386ef5297c2e?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="contenedor">
+      <div class="contenido__principal">
+          <img src="https://plus.unsplash.com/premium_photo-1687672031135-fc2074fd7207?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pbi1zYW1lLXNlcmllc3wxfHx8ZW58MHx8fHx8" alt="">
+          <div class="texto__caja">
+          <h3>Titulo</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam optio hic, vel dolorum, 
+            quod dolore doloribus aperiam eius velit ratione iste quasi eum soluta 
+            obcaecati ducimus totam rem animi! Distinctio.
+          </p>
+         </div>      
+      </div>  
+
+ </div>
+
+  <!--contenedor Tarjetas-->
+ <div class="contenedor__tarjetas">
+  <!--Tarjetas-->
+ <div class="tarjeta">
+ <img src="https://images.unsplash.com/photo-1603985753826-30c036e8804d?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+ <div class="contenido__tarjeta">
+ <h1>Titulo</h1>
+ <p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius doloribus modi iste! 
+  Omnis, eum placeat! Similique suscipit quibusdam modi accusantium sunt dolorum, provident beatae 
+  89 bnm praesentium quasi sapiente, ab distinctio!
+ </p>
+ <a href="#" class="boton__tarjeta">ver más</a>
+ </div>
+ </div>
+
+ <div class="tarjeta">
+  <img src="https://images.unsplash.com/photo-1593693846836-86921cc9fd08?q=80&w=2039&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0" alt="">
+  <div class="contenido__tarjeta">
+  <h1>Titulo</h1>
+  <p>
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius doloribus modi iste! 
+   Omnis, eum placeat! Similique suscipit quibusdam modi accusantium sunt dolorum, provident beatae 
+   89 bnm praesentium quasi sapiente, ab distinctio!
+  </p>
+  <a href="#" class="boton__tarjeta">ver más</a>
+  </div>
+  </div>
+
+  <div class="tarjeta">
+    <img src="https://images.unsplash.com/photo-1531390658120-e06b58d826ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8" alt="">
+    <div class="contenido__tarjeta">
+    <h1>Titulo</h1>
+    <p>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius doloribus modi iste! 
+     Omnis, eum placeat! Similique suscipit quibusdam modi accusantium sunt dolorum, provident beatae 
+     89 bnm praesentium quasi sapiente, ab distinctio!
+    </p>
+    <a href="#" class="boton__tarjeta">ver más</a>
+    </div>
+    </div>
+
+ </div>
+
+
+
 
 <section class="flex__container">
     <div class="box__01">
@@ -73,3 +167,8 @@
          </div>
     </div>
 </footer>
+
+<!--libreria bootstrap javascript-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

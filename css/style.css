@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url();
 
 /* Caja de reseteo de estilo*/
 *{
@@ -13,6 +14,7 @@ body{
     font-family: "Abel", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-color: azure;
 }
 
 /*colores*/
@@ -97,8 +99,8 @@ a:hover{
     .checkbtn{
         display: block;
     }
-    
-    ul{
+    /*agregar el nav*/
+    nav ul{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -128,6 +130,14 @@ a:hover{
         left: 0%; 
       }
 }
+
+/*carrusel bootstrap**/
+.carousel-inner img{
+      width: 100%;
+      height: 500px;  
+      object-fit: cover;
+}
+
 /*Seccion de imagen y bienvenida */
 
 .games{
@@ -136,29 +146,30 @@ a:hover{
     background-size: cover;
     height: 50vh;
     text-align: center;
-    border: 5px solid #1C6EA4;
+    border: 2px solid #1C6EA4;
     border-radius: 0px 0px 70px 0px;
+    
 }
 
-h2{
+ h2{
     color: var(--color__blanco);
     font-size: 32px;
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    z-index: -1;
+    
 }
 
 
 h3{
-    color: var(--color__blanco);
+    color: var(--color__negro);
     font-size: 19px;
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    z-index: -1;
+    
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
@@ -189,6 +200,110 @@ h1{
     font-style: normal;
 }
 
+/*contenido principal*/
+
+.contenedor{
+    justify-content: center;
+    align-items:center;
+    display: flex;
+
+}
+
+.contenido__principal{
+    width: 80%;
+    margin: 3% auto;
+}
+
+.contenido__principal img{
+    max-width: 350px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.texto__caja{
+    color: var(--color__negro);
+    font-size: 19px;
+    justify-content: center;
+}
+
+.texto__caja{
+    font-size: 19px;
+    color: var(--color__negro);
+}
+
+@media(max-width:720px){
+    .contenido__principal img{
+        max-width: 100%;
+    }
+}
+
+.texto__caja h3{
+    color: var(--color__negro);
+    font-size: 19px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+   
+}
+
+/*tarjetas */
+
+
+.contenedor__tarjetas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.tarjeta{
+    width: 325px;
+    background-color: var(--color__principal);
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.tarjeta img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.contenido__tarjeta{
+    padding: 20px
+}
+.contenido__tarjeta h1{
+    font-size: 23px;
+    color: var(--color__blanco);
+}
+.contenido__tarjeta p{
+    font-size: 15px;
+    color: var(--color_blanco);
+}
+
+.boton__tarjeta{
+   display: inline-block;
+   background-color: var(--color__negro);
+   color: var(--color-terciario);
+   text-decoration: none;
+   padding: 8px 20px; 
+   border-radius: 10px;
+}
+
+.boton__tarjeta:hover{
+   /*color de la fuente*/
+    color: var(--color__negro);
+    /*color del fondo*/
+    background-color: aliceblue;
+}
+/*termina tarjetas */
+
 /* este es el padre */
 .flex__container{
     background-color: var(--color-terciario);
@@ -197,7 +312,7 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     width: 70%;
-    margin:  0 auto;
+    margin:  5% auto;
     justify-content: center;
     padding: 10px;
     -webkit-box-shadow: 17px 3px 27px 2px rgba(0,0,0,0.75);
@@ -269,7 +384,7 @@ box-shadow: 17px 3px 27px 2px rgba(0,0,0,0.75);
         font-style: normal;
     }
 
-    /*footer*/
+ /*footer*/
 
  .footer{
     background: var(--color-terciario);
