@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url();
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Caja de reseteo de estilo*/
 *{
@@ -29,11 +29,10 @@ body{
 
 nav{
  background: var(--color__secundario);
- height: 80px;
+ height: 100px;
  width: 100%;
- position: fixed;
- z-index: 9
- ;
+ /*position: fixed;*/
+z-index: 9;
 }
 
 label.logo{
@@ -53,11 +52,13 @@ nav ul{
 
 nav ul li{
     display: inline-block;
-    line-height: 40px;
+    line-height: 80px;
     margin: 0 7px;
+    
 
 }
 nav ul li a{
+   
     color: var(--color__blanco);
     font-size: 17px;
     font-family: "Abel", sans-serif;
@@ -267,7 +268,13 @@ h1{
     border-radius: 20px;
     box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.3);
     overflow: hidden;
+    transition: transform 0.5s ease;
 }
+
+.tarjeta:hover{
+    transform: translateY(-20px);
+}
+
 
 .tarjeta img{
     width: 100%;
@@ -316,31 +323,36 @@ h1{
     justify-content: center;
     padding: 10px;
     -webkit-box-shadow: 17px 3px 27px 2px rgba(0,0,0,0.75);
--moz-box-shadow: 17px 3px 27px 2px rgba(0,0,0,0.75);
-box-shadow: 17px 3px 27px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 17px 3px 27px 2px rgba(0,0,0,0.75);
+    box-shadow: 17px 3px 27px 2px rgba(0,0,0,0.75);
 }
 
-/*ejercicio flexbox*/
+/*ejercicio flexbox boxes*/
 .box__01{
     font-size: 30px;
     background-color: var(--color-primario);
-    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.351), green), url("https://images.unsplash.com/photo-1717190814547-6471d1fa047f?q=80&w=1923&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.351), green), url("https://images.pexels.com/photos/2263822/pexels-photo-2263822.jpeg") center no-repeat;
     background-size: cover;
     width: 250px;
     height: 150px;
     line-height: 150px;
     text-align: center;
-    border: solid rgb(240, 235, 235) 5px;
+    border: solid rgb(15, 15, 15) 5px;
     color: var(--color_blanco);
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
 }
+.box__01:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    border-color: var(--color-secundario); 
+}
  
 .box__02{
     font-size: 30px;
     background-color: var(--color-secundario);
-    background:linear-gradient(to bottom, rgba(0, 0, 255, 0.351), green), url("https://images.unsplash.com/photo-1712025853995-d59634cf286e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat;
+    background:linear-gradient(to bottom, rgba(0, 0, 255, 0.351), green), url("https://images.pexels.com/photos/4219883/pexels-photo-4219883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center no-repeat;
     background-size: cover;
     width: 250px;
     height: 150px;
@@ -351,38 +363,59 @@ box-shadow: 17px 3px 27px 2px rgba(0,0,0,0.75);
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
-    
+    }
+    .box__02:hover {
+        transform: scale(1.05); 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+        border-color: var(--color-secundario);
     }
 
     .box__03{
         font-size: 30px;
         background-color:var(--color-terciario);
-        background:linear-gradient(to bottom, rgba(0, 0, 255, 0.351), green), url("https://plus.unsplash.com/premium_photo-1669223464455-26df96c59901?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat;
+        background:linear-gradient(to bottom, rgba(203, 203, 214, 0.351), green), url("https://images.pexels.com/photos/12672185/pexels-photo-12672185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center no-repeat;
         background-size: cover;
         width: 250px;
         height: 150px;
         line-height: 150px;
         text-align: center;
         border: solid black 5px;
+        color: var(--color__blanco);
         font-family: "Pacifico", cursive;
         font-weight: 400;
         font-style: normal;
     }
 
-    .box__04{
+    .box__03:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+        border-color: var(--color-secundario); 
+    }
+
+    .box__04 {
         font-size: 20px;
         background-color: var(--color-primario);
-        background:linear-gradient(to bottom, rgba(0, 255, 145, 0.345), rgb(145, 132, 207)), url("https://images.unsplash.com/photo-1711322535265-81a1961465e3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat;
+        background: linear-gradient(to bottom, rgba(242, 242, 242, 0), rgba(145, 132, 207, 0.377)), url("https://images.pexels.com/photos/1637438/pexels-photo-1637438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center no-repeat;
         background-size: cover;
         width: 250px;
         height: 150px;
         line-height: 150px;
         text-align: center;
-        border: solid black 5px;
+        border: solid rgb(0, 0, 0) 5px;
+        color: var(--color__blanco);
         font-family: "Pacifico", cursive;
         font-weight: 400;
         font-style: normal;
+        transition: all 0.3s ease; /* Transición suave para los cambios */
     }
+    
+    .box__04:hover {
+        transform: scale(1.05); 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+        border-color: var(--color-secundario);
+    }
+
+
 
  /*footer*/
 
@@ -430,4 +463,263 @@ box-shadow: 17px 3px 27px 2px rgba(0,0,0,0.75);
 .contenido__footer{
     color: black;
 }
+
+/*tarjeta de la pagina de videojuegos*/
+.card{
+    margin: 5% auto;
+    max-width: 920px;
+    width: 90%;
+
+}
+
+.card img{
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+   }
+
+/*termina pagina de videojuegos*/
+
+
+/*eliminar lineas*/
+a{
+    text-decoration: auto!important;
+}
+
+/*mapa*/
+
+.mapa{
+    max-width:720px;
+    margin: 40px auto;
+
+}
+
+.mapa h1{
+    color: var(--color__negro);
+    text-align: center;
+}
+
+iframe{
+    width: 100%;
+    margin: 0 auto;
+    border: 5px solid #040505 !important;
+}
+
+/*termina mapa*/
+
+/*videojuegos html.*/
+
+.flex__container__fotos{
+    /*background-color: var(--color-terciario);*/
+    /*border: 5px solid blueviolet;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin:  0% auto;
+    justify-content: center;
+    /*padding-top: 5px;*/ 
+    border-radius: 20px;
+   
+}
+
+.portada__videojuegos h1{
+    font-size: 45px;
+    line-height: 350px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+/*ejercicio flexbox*/
+.portada__videojuegos{
+    font-size: 30px;
+    background-color: var(--color-primario);
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.114), rgba(0, 128, 0, 0.087)), url("https://images.pexels.com/photos/2263822/pexels-photo-2263822.jpeg") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    line-height: 150px;
+    text-align: center;
+    /*border: solid rgba(15, 15, 15, 0.635) 5px;*/
+    color: var(--color_blanco);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*centrar tarjetas*/
+.container__juegos {
+    display: flex;
+    justify-content: center;
+  }
+  
+/*pagina acerca del videojuego*/
+
+.portada__videojuegos__inf{
+    font-size: 30px;
+    background-color: var(--color-primario);
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.114), rgba(0, 128, 0, 0.087)), url("https://images.unsplash.com/photo-1606422699425-f7122890005f?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    line-height: 150px;
+    text-align: center;
+    /*border: solid rgba(15, 15, 15, 0.635) 5px;*/
+    color: var(--color_blanco);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*termina pagina videojuegos*/
+
+
+
+.flex__container__fotos__inf{
+    /*background-color: var(--color-terciario);*/
+    /*border: 5px solid blueviolet;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin:  0% auto;
+    justify-content: center;
+    /*padding-top: 90px;*/
+    border-radius: 20px;
+    
+   
+}
+
+.portada__videojuegos__inf h1{
+    font-size: 50px;
+    line-height: 350px;
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--color__blanco);
+}
+
+    /* Estilos adicionales para la página */
+    body {
+        background-color: #f8f9fa; /* Color de fondo para la página */
+        font-family: Arial, sans-serif; /* Fuente del texto */
+    }
+
+    .container {
+        background-color: #ffffff; /* Fondo blanco del contenedor principal */
+        padding: 20px; /* Espaciado interno */
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+    }
+
+    .card {
+        border: none; /* Quita el borde de la tarjeta */
+        box-shadow: 0 0 10px rgba(78, 76, 76, 0.1); 
+    }
+
+    .img-fluid {
+        border-radius: 5px; /* Bordes redondeados para la imagen */
+        box-shadow: 0 0 10px rgba(71, 57, 57, 0.1); /* Sombra suave */
+        max-width: 100%; /* Asegurar que la imagen no pase contenedor */
+        height: auto; /* Mantiene la proporción de aspecto */
+    }
+
+    /*termina pagina acerca de*/
+
+    /*empieza pagina de servicios*/
+    
+    /* Estilos personalizados */
+    .service-card {
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .service-icon {
+        font-size: 3rem;
+        color: #007bff;
+    }
+
+    .contact-form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin-right: 1150px;
+        transform: translateX(580px);
+    }
+
+    @media screen and (min-width:1000px ) and (max-width:1387px) {
+        .contact-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-right: 1150px;
+            transform: translateX(580px);
+            width: 20%;
+        }
+        }
+
+        @media screen and (min-width:900px ) and (max-width:999px) {
+            .contact-form {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                margin-right: 1150px;
+                transform: translateX(380px);
+                width: 20%;
+            }
+    }
+
+    @media screen and (min-width:700px ) and (max-width:899px) {
+        .contact-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-right: 1150px;
+            transform: translateX(300px);
+            width: 20%;
+        }
+}
+
+@media screen and (min-width:600px ) and (max-width:699px) {
+    .contact-form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin-right: 1150px;
+        transform: translateX(200px);
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:450px ) and (max-width:599px) {
+    .contact-form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin-right: 1150px;
+        transform: translateX(100px);
+        width: 30%;
+    }
+}
+
+
+@media screen and (min-width:350px ) and (max-width:450px) {
+    .contact-form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin-right: 1150px;
+        transform: translateX(100px);
+        width: 40%;
+    }
+}
+
 
