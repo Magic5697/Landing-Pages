@@ -8,4 +8,5 @@
 
 1. la planificacion fue crear una un blog de videojugos donde el usuario podria esatr e¿informado de cualquier juego 
 
+2. 
 
