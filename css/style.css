@@ -722,4 +722,48 @@ iframe{
     }
 }
 
+/* Estilo básico para los elementos con la clase hover-effect */
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para los elementos cuando se aplica la clase hovered */
+.hovered {
+    transform: scale(1.1); /* Aumenta el tamaño del elemento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra al elemento */
+}
+
+/* Puedes añadir estilos adicionales según sea necesario */
+.hover-effect img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Añade bordes redondeados a las imágenes */
+}
+
+/* Opcional: estilo para diferentes tipos de elementos */
+.hover-effect p {
+    color: #333;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hovered p {
+    background-color: #e0e0e0; /* Cambia el fondo del párrafo cuando está en hover */
+}
+
+.hover-effect button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hovered button {
+    background-color: #cc0000; /* Cambia el fondo del botón cuando está en hover */
+}
 

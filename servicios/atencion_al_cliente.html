@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Script para funciones de sweetalert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
@@ -32,7 +34,7 @@
             <div class="card service-card text-center">
             <div class="card-body">
             <div class="service-icon mb-3">
-            <i class="fas fa-headset"></i>
+            <i class="fas fa-headset hover-effect"></i>
             </div>
             <h5 class="card-title">Soporte 24/7</h5>
             <p class="card-text">Estamos aquí para ayudarte en cualquier momento del día, todos los días.</p>
@@ -43,7 +45,7 @@
                 <div class="card service-card text-center">
                 <div class="card-body">
                 <div class="service-icon mb-3">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope hover-effect"></i>
                 </div>
                 <h5 class="card-title">Correo Electrónico</h5>
                 <p class="card-text">Puedes enviarnos un correo y te responderemos lo más pronto posible.</p>
@@ -54,7 +56,7 @@
         <div class="card service-card text-center">
         <div class="card-body">
         <div class="service-icon mb-3">
-        <i class="fas fa-phone"></i>
+        <i class="fas fa-phone hover-effect"></i>
         </div>
         <h5 class="card-title">Llamada Telefónica</h5>
         <p class="card-text">Llámanos para obtener soporte inmediato y resolver tus dudas.</p>
@@ -64,27 +66,27 @@
         </div>
 
         
-        <div class="row justify-content-center">
+         <div class="row justify-content-center">
         <div class="col-md-8">
-        <div class="contact-form">
-        <form>
-        <div class="form-group">
-        <label for="name">Nombre</label>
-        <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                </form>
+            </div>
         </div>
-        <div class="form-group">
-        <label for="email">Correo Electrónico</label>
-        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
-        </div>
-        <div class="form-group">
-        <label for="message">Mensaje</label>
-        <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu mensaje"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
-        </form>
-        </div>
-        </div>
-        </div>
+    </div>
     </div>
     <section class="flex__container">
         <div class="box__01">
@@ -126,15 +128,75 @@
              </div>
         </div>
     </footer>
-    
     <!-- Incluye Font Awesome para los íconos -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <!-- Incluye jQuery y Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <!--Script efecto hover-->
+    <script>
+    $(document).ready(function() {
+        $('.hover-effect').on('mouseenter', function() {
+            $(this).addClass('hovered');
+        });
+
+        $('.hover-effect').on('mouseleave', function() {
+            $(this).removeClass('hovered');
+        });
+    });
+</script>
+<!--Script efecto hover-->
+
+<!--Script validaciones Swal-->
+<script>
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(event) {
+                event.preventDefault();
+
+                var name = $('#name').val().trim();
+                var email = $('#email').val().trim();
+                var message = $('#message').val().trim();
+
+                if (name === '') {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Campo vacío',
+                        text: 'Por favor, ingresa tu nombre.',
+                    });
+                    return;
+                }
+
+                if (email === '') {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Campo vacío',
+                        text: 'Por favor, ingresa tu correo electrónico.',
+                    });
+                    return;
+                }
+
+                if (message === '') {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Campo vacío',
+                        text: 'Por favor, escribe tu mensaje.',
+                    });
+                    return;
+                }
+
+                // Aquí puedes agregar el código para enviar el formulario si todo está correcto
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Formulario enviado',
+                    text: 'Tu mensaje ha sido enviado con éxito.',
+                });
+            });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
 
     
 
